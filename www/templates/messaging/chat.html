@@ -1,0 +1,36 @@
+<ion-view view-title="{{ message.title }}">
+  <ion-nav-buttons side="secondary">
+    <img ng-src="{{ user.image }}" alt="" class="thumb-xs rounded b b-light">
+  </ion-nav-buttons>
+
+  <ion-content>
+    <!-- Chat bubbles -->
+    <div class="list chat-bubble">
+
+    <div class="item item-avatar" ng-class="message.isMe?'me':'friend'">
+        <img ng-src="{{ message.sender_image }}" ng-if="!message.isMe">
+        <div class="bubble">
+          <i class="icon-tail"></i>
+          <span class="content" ng-bind-html="message.body | nl2br"></span>
+        </div>
+        <span class="message-status">{{ message.created_on }}</span>
+      </div>
+
+      <div class="item item-avatar" ng-class="reply.isMe?'me':'friend'" href="#" ng-repeat="reply in replies">
+        <img ng-src="{{reply.sender_image}}" ng-if="!reply.isMe">
+        <div class="bubble">
+          <i class="icon-tail"></i>
+          <span class="content" ng-bind-html="reply.body | nl2br"></span>
+        </div>
+        <span class="message-status">{{reply.timestamp}}</span>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="item-input-inset" keyboard-attach>
+    <label class="item-input-wrapper no-bg">
+      <input type="text" placeholder="Type a message" ng-model="replyData.body">
+    </label>
+    <button class="button button-clear button-calm" ng-click="doReply()">Send
+    </button>
+  </ion-footer-bar>
+</ion-view>

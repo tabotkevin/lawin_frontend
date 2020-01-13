@@ -1,0 +1,25 @@
+<ion-view view-title="Search">
+  
+  <ion-content class="stable-bg">
+    <div class="list">
+      
+      <div class="card" ng-repeat="lawyer in lawyers">
+        <div class="item item-avatar item-text-wrap">
+          <img src="{{ lawyer.image }}" alt="">
+          <div class="row no-padder" ui-sref="tab.user({id: {{ lawyer.id }}})">
+            <div class="no-padder col-75">
+              <h2 class="text-sm">{{ lawyer.name }}</h2>
+              <div class="clear">
+                <div class="text-sm text-muted">{{ lawyer.position }} {{ lawyer.company }}</div>
+                <div class="text-sm text-muted">{{ lawyer.location }}</div>
+                <div class="text-sm text-muted">{{ lawyer.about | limitTo: 20 }}{{lawyer.about.length > 20 ? '...' : ''}}</div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="button button-small padder button-outline button-calm font-bold" ui-sref="tab.composs({userId: lawyer.id })">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

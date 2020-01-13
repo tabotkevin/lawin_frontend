@@ -1,0 +1,78 @@
+<ion-view>
+  <ion-nav-title>
+  </ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon ion-ios-more"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-footer">
+    <div class="">
+      <div class="item item-avatar item-text-wrap" ui-sref="tab.user({id: feed.author_id  })">
+        <img ng-src="{{ feed.author_image }}" alt="" class="thumb-xxs rounded pull-left m-r-xxs">
+        <div class="clear">
+         <div class="font-bold">{{ feed.author_name }}</div>
+          <div class="text-sm text-muted">{{ feed.author_position }} {{ feed.author_company }}</div>
+          <div class="text-sm text-muted">{{ feed.created_on }}</div>
+        </div>
+      </div>
+
+      <div class="wrapper-sm">
+        <h2>{{ feed.title }}</h2>
+        <p>
+          {{ feed.body }}
+        </p>
+      </div>
+
+      <div class="img-full" ng-if="feed.image != 'false'">
+        <img  ng-src="{{ feed.image }}">
+      </div>
+
+      <div class="wrapper-sm b-b b-light">
+        <a href="" class="subdued">{{ feed.likes }} {{ feed.likes <= 1 ? 'Like' : 'Likes' }}</a>·
+        <a ng-click="getComents()" class="subdued">{{ comments.length }} {{ comments.length <= 1 ? 'Comment' : 'Comments' }}</a>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left m-n b-none">
+        <a class="tab-item" ng-click="doLike()">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item" href="#/tab/composs/{{ feed.author_id }}">
+          <i class="icon ion-ios-chatboxes"></i>
+          Message
+        </a>
+      </div>
+
+      <div class="b-b b-light"></div>
+
+      <!-- Comments -->
+      <div class="item item-divider no-bg b-none ">Comments</div>
+      <div class="item item-avatar item-text-wrap" ng-repeat="comment in comments">
+        <img ng-src="{{ comment.author_image }}" alt="" class="thumb-xxs rounded pull-left m-r-xxs">
+        <div class="clear b-b b-light">
+          <div class="m-b-sm" ui-sref="tab.user({id: {{ comment.author_id }}})">
+            <div class="font-bold">{{ comment.author_name }}</div>
+            <div class="text-sm text-muted">{{ comment.created_on }}</div>
+          </div>
+
+          <p class="">{{ comment.body }}</p>
+
+         
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+  <ion-footer-bar id="comment" class="item-input-inset" keyboard-attach>
+    <label class="item-input-wrapper">
+      <input type="search" ng-model="commentData.body" placeholder="Add a comment...">
+    </label>
+    <button ng-click="doComment()" class="button button-clear">
+      Send
+    </button>
+  </ion-footer-bar>
+</ion-view>

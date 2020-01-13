@@ -1,0 +1,33 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-calm">
+		<button class="button button-clear" ng-click="closePost()">
+			<i class="icon ion-android-close"></i>
+		</button>
+		<div class="h1 title">Share</div>
+	</ion-header-bar>
+
+	<ion-content>
+    <div class="item item-avatar b-none">
+			<img src="img/ben.png" random-avatar alt="">
+			<textarea class="w-full l-h" rows="5" placeholder="Write something or use @ to mention someone" focus-me></textarea>
+    </div>
+
+    <div class="wrapper photo-added" ng-show="newPost.imgSrc">
+      <img class="w-full" ng-src="{{newPost.imgSrc}}" alt="">
+			<button class="button button-assertive button-clear" ng-click="removePhoto()">Remove</button>
+    </div>
+
+  </ion-content>
+
+  <ion-footer-bar keyboard-attach horizontal layout justified class="b-t b-light">
+    <div>
+      <button class="button button-icon ion-earth"></button>
+      <button class="button button-icon ion-link"></button>
+      <button class="button button-icon ion-camera" ng-click="addPhoto()"></button>
+			<button class="button button-icon ion-ios-at"></button>
+    </div>
+    <div>
+      <button class="button button-outline padder button-calm">Share</button>
+    </div>
+  </ion-footer-bar>
+</ion-modal-view>

@@ -1,0 +1,37 @@
+<ion-modal-view class="bg-gradient">
+  <ion-header-bar class="no-bg b-none bar-no-border">
+    <h1 class="title"></h1>
+    <button class="button button-icon button-clear button-light ion-android-close" ng-click="closeRegister()"></button>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <div class="list card">
+      <label class="item item-input">
+        <span class="input-label">Full name</span>
+        <input type="text" ng-model="signupData.name" focus-me>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="email" ng-model="signupData.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Location</span>
+        <input type="text" ng-model="signupData.location">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">About</span>
+        <input type="text" ng-model="signupData.about">
+      </label>
+      <label class="item item-input">
+      <span class="input-label">Password</span>
+        <input type="password" ng-model="signupData.password">
+      </label>
+    </div>
+
+    <p class="light text-center">
+      By signing up, you agree to the <br>Terms of Service & Privacy Policy
+    </p>
+
+    <button class="button button-block button-outline button-light" ng-click="doSignup()"><b>Join now</b></button>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,179 @@
+$brandColor: #008cc9
+$borderColor: #eee
+
+/* BASED ON HELPER.SASS */
+
+a.tag
+  text-decoration: none
+  font-weight: 700
+  color: #008cc9
+
+/* Landing */
+.slider-pager
+  font-size: 8px
+  bottom: 8px
+
+.bg-gradient
+  background-image: -webkit-gradient(linear, right bottom, left bottom, color-stop(0, #008DC9), color-stop(1, #019DA5))
+  background-image: -o-linear-gradient(left, #019DA5 0%, #008DC9 100%)
+  background-image: -moz-linear-gradient(left, #019DA5 0%, #008DC9 100%)
+  background-image: -webkit-linear-gradient(left, #019DA5 0%, #008DC9 100%)
+  background-image: -ms-linear-gradient(left, #019DA5 0%, #008DC9 100%)
+  background-image: linear-gradient(to left, #019DA5 0%, #008DC9 100%)
+
+/* Post */
+.item.post-body
+  border-top: none
+  padding-top: 5px
+  padding-bottom: 5px
+
+/* Sidemenu */
+.menu-open .menu-content.menu-animated
+  transform: translate3d(-225px, 0px, 0px) scale(.8) !important
+  // border-radius: 4px
+ion-side-menus
+  background: #222629!important
+.menu.menu-right
+  background-color: transparent
+  padding: 80px 16px 80px 32px
+  color: #fff
+  .item
+    background-color: transparent
+    border: none
+    h2
+      color: #fff
+    img
+      border-radius: 0
+  h3
+    font-weight: 200
+    color: #fff
+
+/* FEEDS */
+.card
+  margin: 5px
+
+.carousel
+  overflow: scroll
+  white-space: nowrap
+
+.carousel-item
+  padding: 3px
+  display: inline-block
+  width: 94px
+  vertical-align: top
+  &.item-topic
+    height: 60px
+    width: 140px
+    white-space: normal
+
+.likers .more-liker, .avatars .more-avatar
+  width: 36px
+  height: 36px
+  line-height: 36px
+  text-align: center
+  border-radius: 50%
+
+.item-icon-right .icon.secondary
+  right: 50px
+
+/* end BASED ON HELPER.SASS */
+
+/* Messaging */
+.bubble-to
+  margin: 10px 50px 10px 30px
+  border-radius: 4px
+  box-shadow: none
+.time-to
+  padding-left: 30px
+.bubble-from
+  margin: 10px 10px 10px 80px
+  border-radius: 4px
+  box-shadow: none
+  .item p
+    color: #fff
+.time-from
+  text-align: right
+  padding-right: 10px
+
+/* Profile */
+.cover-image
+  background-size: cover
+  height: 200px
+.profile-top
+  margin-top: -60px
+  position: relative
+  overflow: initial
+  .item
+    padding-top: 70px
+  h2
+    font-size: 24px
+    font-weight: thin
+  .ion-edit
+    position: absolute
+    top: 0
+    right: 8px
+.avatar-profile
+  width: 128px
+  height: 128px
+  border-radius: 50%
+  border: 4px solid #fff
+  position: absolute
+  top: -70px
+  left: 50%
+  margin-left: -70px
+  @extend .box-shadow
+
+.avatar-organization
+  border-radius: 0px!important
+
+.button-fab
+  position: fixed
+  right: 16px
+  bottom: 64px
+  z-index: 100
+  color: #fff
+  width: 48px
+  height: 48px
+  font-size: 20px
+  border-radius: 999em
+  text-align: center
+  line-height: 48px
+  @extend .box-shadow
+
+/* Settings */
+.tabs-secondary
+  justify-content: space-around
+  .tab-item
+    flex: initial
+
+/* Intro */
+.intro-buttons
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+.slide-intro
+  height: 100%
+  .slider-pager
+    font-size: 10px
+    bottom: 130px
+.flex-vertical-center
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.settings .tab-item.active
+  border-bottom: 2px solid $brandColor
+
+.also-view
+  background-size: cover
+  background-color: #1b4b74
+  padding-top: 16px
+  padding-bottom: 80px
+  .item
+    background-color: transparent
+    border: none
+    color: #fff
+    margin: 0
+    h2, p
+      color: #fff

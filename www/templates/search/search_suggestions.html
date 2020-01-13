@@ -1,0 +1,32 @@
+<div class="item item-divider no-bg  b-none">Recent</div>
+<div class="b-b b-light"></div>
+<div class="wrapper-sm">
+  <div class="thumb text-center m-r-md m-b" ng-repeat="i in [0,1,2,3]">
+    <img src="" random-avatar alt="" class="rounded m-b-xs">
+    <div class="text-sm text-muted l-h-1x">David Guerra</div>
+  </div>
+</div>
+
+<div class="item item-divider no-bg  b-none">Try searching for</div>
+<div class="list">
+  <div class="item item-icon-left text-muted item-text-wrap">
+    <i class="icon ion-clipboard"></i>
+    Posts about <span class="font-bold color-black">Front-end</span>
+  </div>
+  <div class="item item-icon-left text-muted item-text-wrap">
+    <i class="icon ion-ios-people"></i>
+    Find groups about <span class="font-bold color-black">Front-end</span>
+  </div>
+  <div class="item item-icon-left text-muted item-text-wrap">
+    <i class="icon ion-clipboard"></i>
+    Posts about <span class="font-bold color-black">PHP</span>
+  </div>
+</div>
+
+<div class="item item-divider no-bg  b-none">Suggested topics</div>
+<div class="b-b b-light"></div>
+<ion-scroll direction="x" class="carousel wrapper-sm">
+  <div class="carousel-item item-topic wrapper r-2x light font-bold m-r-sm text-center" random-background ng-repeat="i in [0,1,2,3]">
+    <span>AngularJS Framework</span>
+  </div>
+</ion-scroll>

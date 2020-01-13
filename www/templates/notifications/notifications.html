@@ -1,0 +1,121 @@
+<ion-view view-title="Notifications" hide-nav-bar="true">
+  <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+    <label class="item-input-wrapper light-bg" ng-init="searchFocus = false">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search for people, jobs, posts and more..." ng-focus="searchFocus = true">
+    </label>
+
+    <button class="button button-clear" ng-show="searchFocus" ng-click="searchFocus = false; hideKeyboard()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content class="stable-bg">
+    <div class="list">
+      <div class="card">
+        <div class="item item-avatar item-text-wrap">
+          <img src="" random-avatar alt="">
+          <div class="row no-padder">
+            <div class="no-padder col-75">
+              <h2 class="text-sm">Batman and 5 others viewed your profile</h2>
+            </div>
+            <div class="no-padder col-25 text-right">
+              <i class="dot-status text-xs icon ion-record calm"></i>
+              <span class="text-muted text-xs">2 mins</span>
+            </div>
+          </div>
+          <div class="likers wrapper-sm">
+            <img class="thumb-xs rounded m-r-sm pull-left" src="img/adam.jpg" random-avatar alt="" ng-repeat="i in [0,1]">
+            <span class="thumb-xs rounded b b-light more-liker">
+              <i class="icon ion-more"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-avatar item-text-wrap">
+          <img src="" random-avatar alt="">
+          <div class="row no-padder">
+            <div class="no-padder col-75">
+              <h2 class="text-sm">Robin and 4 others are celebrating birthdays</h2>
+            </div>
+            <div class="no-padder col-25 text-right">
+              <i class="dot-status text-xs icon ion-record calm"></i>
+              <span class="text-muted text-xs">2 mins</span>
+            </div>
+          </div>
+          <div class="likers wrapper-sm">
+            <img class="thumb-xs rounded m-r-sm pull-left" src="img/adam.jpg" random-avatar alt="" ng-repeat="i in [0,1]">
+            <span class="thumb-xs rounded b b-light more-liker">
+              <i class="icon ion-more"></i>
+            </span>
+          </div>
+          <button class="button button-small padder button-outline button-calm font-bold">Say happy birthday</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-avatar item-text-wrap">
+          <img src="" random-avatar alt="">
+          <div class="row no-padder">
+            <div class="no-padder col-75">
+              <h2 class="text-sm">Batman and 5 others viewed your profile</h2>
+            </div>
+            <div class="no-padder col-25 text-right">
+              <i class="dot-status text-xs icon ion-record calm"></i>
+              <span class="text-muted text-xs">2 mins</span>
+            </div>
+          </div>
+          <div class="likers wrapper-sm">
+            <img class="thumb-xs rounded m-r-sm pull-left" src="img/adam.jpg" random-avatar alt="" ng-repeat="i in [0,1]">
+            <span class="thumb-xs rounded b b-light more-liker">
+              <i class="icon ion-more"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-avatar item-text-wrap">
+          <img src="" random-avatar alt="">
+          <div class="row no-padder">
+            <div class="no-padder col-75">
+              <h2 class="text-sm">Robin and 4 others are celebrating birthdays</h2>
+            </div>
+            <div class="no-padder col-25 text-right">
+              <i class="dot-status text-xs icon ion-record calm"></i>
+              <span class="text-muted text-xs">2 mins</span>
+            </div>
+          </div>
+          <div class="likers wrapper-sm">
+            <img class="thumb-xs rounded m-r-sm pull-left" src="img/adam.jpg" random-avatar alt="" ng-repeat="i in [0,1]">
+            <span class="thumb-xs rounded b b-light more-liker">
+              <i class="icon ion-more"></i>
+            </span>
+          </div>
+          <button class="button button-small padder button-outline button-calm font-bold">Say happy birthday</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="item item-avatar item-text-wrap">
+          <img src="" random-avatar alt="">
+          <div class="row no-padder">
+            <div class="no-padder col-75">
+              <h2 class="text-sm">Iron Man endorsed you for 5 skills</h2>
+            </div>
+            <div class="no-padder col-25 text-right">
+              <span class="text-muted text-xs">30 mins</span>
+            </div>
+          </div>
+
+          <div class="font-bold text-sm">
+            <div>AJAX</div>
+            <div>Javascript</div>
+            <div>PHP</div>
+            <div>+2 more</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

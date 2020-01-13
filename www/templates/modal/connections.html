@@ -1,0 +1,18 @@
+<ion-modal-view>
+	<ion-header-bar class="bar-calm">
+		<button class="button button-clear" ng-click="closeConnections()">
+			<i class="icon ion-android-close"></i>
+		</button>
+		<div class="h1 title">Connections</div>
+	</ion-header-bar>
+	<ion-content>
+		<div class="list">
+      <div class="item item-avatar item-icon-right" auto-list-divider auto-list-divider-value="{{item.name}}" auto-divider-function="dividerFunction" ng-repeat="item in connections">
+				<img src="img/adam.jpg" random-avatar alt="">
+				<div class="font-bold">{{item.name}}</div>
+				<div class="text-sm text-muted">Sales Executive</div>
+				<i class="icon ion-ios-more"></i>
+			</div>
+    </div>
+	</ion-content>
+</ion-modal-view>

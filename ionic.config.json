@@ -1,0 +1,16 @@
+{
+  "name": "linkedin-ui",
+  "integrations": {},
+  "type": "angular",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "scss/*.scss",
+    "scss/*.sass"
+  ],
+  "id": "d5efac9d"
+}

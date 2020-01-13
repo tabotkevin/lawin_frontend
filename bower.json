@@ -1,0 +1,11 @@
+{
+  "name": "lawin",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.0"
+  },
+  "dependencies": {
+    "ionic-ion-tinder-cards": "*",
+    "ngCordova": "^0.1.27-alpha"
+  }
+}

@@ -1,0 +1,58 @@
+<ion-view hide-nav-bar="true">
+  <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+    <label class="item-input-wrapper light-bg">
+    <a href="#/tab/search/{{ query }}">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+    </a>
+      <input type="search" ng-model="query" placeholder="Search for lawyers">
+    </label>
+  </ion-header-bar>
+  <ion-content class="has-subheader bg-muted">
+    <ion-refresher on-refresh="refresh()" pulling-icon="ion-chevron-up"></ion-refresher>
+
+    <div class="list card" ng-repeat="feed in feeds">
+      <div class="item item-avatar item-text-wrap" ui-sref="tab.user({id: {{ feed.author_id }}})">
+        <img ng-src="{{ feed.author_image }}" alt="" class="thumb-xxs rounded pull-left m-r-xxs">
+        <div class="clear">
+          <div class="font-bold">{{ feed.author_name }}</div>
+          <div class="text-sm text-muted">{{ feed.author_position }} {{ feed.author_company }}</div>
+          <div class="text-sm text-muted">{{ feed.created_on }}</div>
+        </div>
+      </div>
+
+      <div class="wrapper-sm" ui-sref="tab.feed({id: {{ feed.id }}})">
+       <h2>{{ feed.title }}</h2>
+        <p>
+          {{ feed.body | limitTo: 20 }}{{feed.body.length > 20 ? ' ...' : ''}}
+          
+        </p>
+      </div>
+
+      <div class="img-full" ng-if="feed.image != 'false'" ui-sref="tab.feed({id: {{ feed.id }}})">
+        <img  ng-src="{{ feed.image }}">
+      </div>
+
+      
+      <div class="wrapper-sm" ui-sref="tab.feed({id: {{ feed.id }}})">
+        <a href="" class="subdued">{{ feed.likes }} {{ feed.likes <= 1 ? 'Like' : 'Likes' }}</a>·
+        <a href="" class="subdued">{{ feed.comments }} {{ feed.comments <= 1 ? 'Comment' : 'Comments' }}</a>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left m-n">
+        <a class="tab-item" ng-click="doLike(feed.id)">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="#/tab/feed/{{ feed.id }}">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item" href="#/tab/composs/{{ feed.author_id }}">
+          <i class="icon ion-ios-chatboxes"></i>
+          Message
+        </a>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

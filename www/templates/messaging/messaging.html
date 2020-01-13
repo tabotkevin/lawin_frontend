@@ -1,0 +1,27 @@
+<ion-view view-title="Messaging">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon ion-compose"></button>
+  </ion-nav-buttons>
+
+  <div class="bar bar-subheader item-input-inset bar-no-border bg-muted">
+    <label class="item-input-wrapper light-bg">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" placeholder="Search messages">
+    </label>
+  </div>
+
+  <ion-content class="has-subheader">
+    <div class="list list-messages">
+      <div class="item item-avatar item-text-wrap" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9]" ui-sref="tab.chat">
+        <img src="img/adam.jpg" random-avatar alt="">
+        <h2>Adam {{$index}}</h2>
+        <p>
+          Hello candidates! I'm from NAN a company that provide...
+        </p>
+        <div class="pos-abt text-muted text-xs right top wrapper">
+          Nov 3
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

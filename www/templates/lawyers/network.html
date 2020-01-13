@@ -1,0 +1,47 @@
+<ion-view view-title="Network" hide-nav-bar="true">
+  <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+    <label class="item-input-wrapper light-bg" ng-init="searchFocus = false">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search for people, jobs, posts and more..." ng-focus="searchFocus = true">
+    </label>
+
+    <button class="button button-clear" ng-show="searchFocus" ng-click="searchFocus = false; hideKeyboard()">Cancel</button>
+  </ion-header-bar>
+
+  <ion-content>
+    <div ng-show="searchFocus" ng-include="'templates/search/search_suggestions.html'"></div>
+
+    <div ng-show="!searchFocus">
+      <div class="row no-padder">
+        <div class="col b-r b-light wrapper-sm" ng-click="openConnections()"><span class="calm font-bold m-r-xs">485</span>Connections</div>
+        <div class="col wrapper-sm" ng-click="openAdd()"><i class="icon ion-plus-round calm m-r-xs"></i>Find connections</div>
+      </div>
+
+      <div class="list m-n">
+        <div class="item item-divider b-none bg-muted">
+          Received invitations (1 new)
+        </div>
+        <div class="item item-avatar item-icon-right">
+          <img src="img/adam.jpg" random-avatar alt="">
+          <div class="font-bold">Adam Lambert</div>
+          <div class="text-sm text-muted">Sales Executive</div>
+          <div class="text-xs text-muted">2 mutual connections</div>
+          <i class="icon ion-ios-close-outline secondary"></i>
+          <i class="icon ion-ios-checkmark-outline calm"></i>
+        </div>
+      </div>
+
+
+      <div class="list">
+        <div class="item item-divider no-bg">People you may know</div>
+        <div class="item item-avatar item-icon-right" ng-repeat="i in [0,1,2,3,4,5,6,7,8]">
+          <img src="img/adam.jpg" random-avatar alt="">
+          <div class="font-bold">Adam Lambert</div>
+          <div class="text-sm text-muted">Sales Executive</div>
+          <div class="text-xs text-muted">2 mutual connections</div>
+          <i class="icon ion-ios-plus-outline calm"></i>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view view-title="Edit Profile">
+  
+
+  <ion-content class="padding">
+    <div class="list card">
+      <label class="item item-input">
+        <span class="input-label">Full name</span>
+        <input ng-model="userData.name" ng-init="userData.name = {{ user.name }}" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input ng-model="userData.email" ng-init="userData.email = {{ user.email }}" type="email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Location</span>
+        <input ng-model="userData.location" ng-init="userData.location = {{ user.location }}" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">About</span>
+        <input ng-model="userData.about" ng-init="userData.about = {{ user.about }}" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Company</span>
+        <input ng-model="userData.company" ng-init="userData.company = {{ user.company }}" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Position</span>
+        <input ng-model="userData.position" ng-init="userData.position = {{ user.position }}" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input ng-model="userData.password" ng-init="userData.password = {{ user.password }}" type="text">
+      </label>
+    </div>
+  </ion-content>
+  <ion-footer-bar keyboard-attach horizontal layout justified class="b-t b-light">
+    <div>
+      <button class="button button-icon ion-upload" ng-click="uploadImage()" ng-disabled="image === null">Upload</button>
+      <button class="button button-icon ion-camera" ng-click="loadImage()">Take Photo</button>
+    </div>
+    <div>
+      <button class="button button-outline padder button-calm" ng-click="doEdit()">Save</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

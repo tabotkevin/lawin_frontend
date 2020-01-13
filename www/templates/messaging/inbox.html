@@ -1,0 +1,17 @@
+<ion-view view-title="Inbox">
+  
+  <ion-content class="has-subheader">
+    <div class="list list-messages">
+      <div class="item item-avatar item-text-wrap" ng-repeat="message in messages" ui-sref="tab.message({id: message.id })">
+        <img ng-src="{{ message.sender_image }}" alt="">
+        <h2>{{ message.title }}</h2>
+        <p>
+          {{ message.body }}
+        </p>
+        <div class="pos-abt text-muted text-xs right top wrapper">
+          {{ message.created_on }}
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

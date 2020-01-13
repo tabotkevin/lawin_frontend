@@ -1,0 +1,18 @@
+<ion-view view-title="Send Message">
+	
+	<ion-content>
+    <div class="item item-avatar b-none">
+			<img src="{{ user.image }}" random-avatar alt="">
+      <input type="text" ng-model="messageData.title" placeholder="Message title" focus-me> <br>
+			<textarea class="w-full l-h" ng-model="messageData.body" rows="5" placeholder="Write your message here..." focus-me></textarea>
+    </div>
+  </ion-content>
+
+  <ion-footer-bar keyboard-attach horizontal layout justified class="b-t b-light">
+    <div>
+    </div>
+    <div>
+      <button class="button button-outline padder button-calm" ng-click="doSend()">Send</button>
+    </div>
+  </ion-footer-bar>
+</ion-view>

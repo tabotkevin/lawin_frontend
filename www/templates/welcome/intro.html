@@ -1,0 +1,21 @@
+<ion-view hide-nav-bar="true" ng-class="{'bg-gradient': activeIndex != 0}" vertical layout>
+  <div flex relative>
+    <ion-slide-box fit on-slide-changed="slideHasChanged($index)" active-slide="activeIndex" ng-init="activeIndex = 0">
+      <ion-slide class="text-center flex-vertical-center">
+        <h1>lawIN</h1>
+        <p class="font-thin text-lg">Connect to Oppotunity™</p>
+      </ion-slide>
+      <ion-slide class="text-center flex-vertical-center">
+        <h2 class="font-thin light">Create your awesome profile</h2>
+      </ion-slide>
+      <ion-slide class="text-center flex-vertical-center">
+        <h2 class="font-thin light">Connect and keep in touch with the network</h2>
+      </ion-slide>
+    </ion-slide-box>
+  </div>
+
+  <div class="padder">
+    <button class="button button-block" ng-class="{'button-light button-outline': activeIndex != 0, 'button-calm': activeIndex == 0}" ng-click="openRegister()"><b>Join now</b></button>
+    <button class="button button-block button-balanced" ng-class="{'button-calm': activeIndex == 0}" ng-click="openLogin()"><b>Sign in</b></button>
+  </div>
+</ion-view>

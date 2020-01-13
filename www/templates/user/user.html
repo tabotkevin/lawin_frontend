@@ -1,0 +1,25 @@
+<ion-view view-title="{{ user.name }}" hide-nav-bar="true">
+  <ion-header-bar class="bar-calm item-input-inset bar-no-border">
+    <label class="item-input-wrapper light-bg">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search" value="{{ user.name }}">
+    </label>
+  </ion-header-bar>
+
+  <ion-content class="bg-muted">
+    <div class="cover-image has-bg" ng-style="{'background-image': 'url(\'' + 'img/bg.png' + '\')'}"></div>
+
+    <div class="card profile-top text-center">
+      <div class="item item-text-wrap">
+        <img src="{{ user.image }}" class="avatar-profile" alt="">
+        <h2 class="font-thin">{{ user.name }}</h2>
+        <div class="text-md">{{ user.position }}, {{ user.company }}</div>
+        <div class="text-sm text-muted">{{ user.location }} <i class="icon ion-person-stalker"></i></div>
+        <div class="padding">
+          <button class="button button-small font-bold padder button-calm">{{ user.email }}</button>
+        </div>
+        <br>
+        <p>{{ user.about }}</p>
+      </div>
+    </div>
+</ion-view>
